@@ -5025,7 +5025,7 @@ PrefabInstance:
     - target: {fileID: 3946376847079625120, guid: 4ca810eee207a9c47a8ce33ea21c709d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -43
+      value: -59.81
       objectReference: {fileID: 0}
     - target: {fileID: 3946376847079625120, guid: 4ca810eee207a9c47a8ce33ea21c709d,
         type: 3}
@@ -5095,6 +5095,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 991957546}
+  - component: {fileID: 991957547}
   m_Layer: 0
   m_Name: Academy
   m_TagString: Untagged
@@ -5116,6 +5117,63 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &991957547
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 991957545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ada961d505179994a87daca8239e1afc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Name: 
+  m_EditorClassIdentifier: 
+  broadcastHub:
+    broadcastingBrains:
+    - {fileID: 11400000, guid: feb5457538ec2eb4c9135f11b40a6704, type: 2}
+    m_BrainsToControl: []
+  m_OriginalGravity: {x: 0, y: 0, z: 0}
+  m_OriginalFixedDeltaTime: 0
+  m_OriginalMaximumDeltaTime: 0
+  m_TrainingConfiguration:
+    width: 80
+    height: 80
+    qualityLevel: 1
+    timeScale: 100
+    targetFrameRate: -1
+  m_InferenceConfiguration:
+    width: 1280
+    height: 720
+    qualityLevel: 5
+    timeScale: 1
+    targetFrameRate: 60
+  resetParameters:
+    m_ResetParameters: []
+  m_IsCommunicatorOn: 0
+  m_IsInference: 1
+  m_EpisodeCount: 0
+  m_StepCount: 0
+  m_TotalStepCount: 0
+  m_ModeSwitched: 0
+  m_FirstAcademyReset: 0
+  KartMaterial: {fileID: 0}
 --- !u!4 &992056764 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1579282987822796750, guid: 941fac9249b6442cdb2d3f23472128e2,
@@ -8716,7 +8774,7 @@ PrefabInstance:
     - target: {fileID: 3946376847079625120, guid: 4ca810eee207a9c47a8ce33ea21c709d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 56
+      value: 39.4
       objectReference: {fileID: 0}
     - target: {fileID: 3946376847079625120, guid: 4ca810eee207a9c47a8ce33ea21c709d,
         type: 3}
@@ -8896,7 +8954,7 @@ PrefabInstance:
     - target: {fileID: 3946376847079625120, guid: 4ca810eee207a9c47a8ce33ea21c709d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -45
+      value: -58.1
       objectReference: {fileID: 0}
     - target: {fileID: 3946376847079625120, guid: 4ca810eee207a9c47a8ce33ea21c709d,
         type: 3}

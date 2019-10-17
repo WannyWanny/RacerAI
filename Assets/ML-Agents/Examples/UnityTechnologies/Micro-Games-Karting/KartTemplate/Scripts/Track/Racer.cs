@@ -1,13 +1,14 @@
 ﻿using System.Collections.Generic;
 using KartGame.KartSystems;
 using UnityEngine;
+using MLAgents;
 
 namespace KartGame.Track
 {
     /// <summary>
     /// The default implementation of the IRacer interface.  This is a representation of all the timing information for a particular kart as it goes through a race.
     /// </summary>
-    public class Racer : MonoBehaviour, IRacer
+    public class Racer : Agent, IRacer
     {
         [Tooltip ("A reference to the IControllable for the kart.  Normally this is the KartMovement script.")]
         [RequireInterface (typeof(IControllable))]

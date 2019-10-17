@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/UnityTechnologies/Micro-Games-Karting/KartTemplate/Scenes/SampleScene.unity
+- path: Assets/ML-Agents/Examples/UnityTechnologies/Micro-Games-Karting/KartTemplate/Scenes/SampleScene.unity
   isLoaded: 1
   isActive: 1

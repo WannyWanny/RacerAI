@@ -76,9 +76,9 @@
      <Compile Include="Assets\ML-Agents\Editor\Tests\RayPerceptionTests.cs" />
      <Compile Include="Assets\ML-Agents\Editor\Tests\TensorUtilsTest.cs" />
      <Compile Include="Assets\ML-Agents\Editor\Tests\UtilitiesTests.cs" />
-     <Compile Include="Assets\UnityTechnologies\Micro-Games-Karting\KartTemplate\Editor\AutoLockUILayer.cs" />
-     <Compile Include="Assets\UnityTechnologies\Micro-Games-Karting\KartTemplate\Scripts\KartSystems\KartMovement\Editor\KartMovementEditor.cs" />
-     <Compile Include="Assets\UnityTechnologies\Micro-Games-Karting\KartTemplate\Scripts\Utilities\Editor\RequireInterfaceAttributeDrawer.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\UnityTechnologies\Micro-Games-Karting\KartTemplate\Editor\AutoLockUILayer.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\UnityTechnologies\Micro-Games-Karting\KartTemplate\Scripts\KartSystems\KartMovement\Editor\KartMovementEditor.cs" />
+     <Compile Include="Assets\ML-Agents\Examples\UnityTechnologies\Micro-Games-Karting\KartTemplate\Scripts\Utilities\Editor\RequireInterfaceAttributeDrawer.cs" />
  <Reference Include="Cinemachine">
  <HintPath>C:/Users/lejen/RacerAI/RacerAI/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
  </Reference>
