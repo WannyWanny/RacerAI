@@ -9,7 +9,7 @@ namespace KartGame.KartSystems
     {
         [Tooltip ("The amount by which the kart bounces off the wall.  A value of 0.1 means 1.1 times the velocity into the wall is the velocity away from the wall.  A minimum value of 0.1 is suggested.")]
         public float bounciness = 0.1f;
-
+        
         public Vector3 ModifyVelocity (IKartInfo collidingKart, RaycastHit collisionHit)
         {
             //if the normal of collision points almost straight up or down, don't bounce

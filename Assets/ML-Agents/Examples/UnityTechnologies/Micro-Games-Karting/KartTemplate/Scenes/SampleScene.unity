@@ -5129,29 +5129,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ada961d505179994a87daca8239e1afc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Name: 
-  m_EditorClassIdentifier: 
   broadcastHub:
     broadcastingBrains:
-    - {fileID: 11400000, guid: feb5457538ec2eb4c9135f11b40a6704, type: 2}
-    m_BrainsToControl: []
-  m_OriginalGravity: {x: 0, y: 0, z: 0}
-  m_OriginalFixedDeltaTime: 0
-  m_OriginalMaximumDeltaTime: 0
+    - {fileID: 11400000, guid: b7c553742d96893458bae51de7344d02, type: 2}
+    m_BrainsToControl:
+    - {fileID: 11400000, guid: b7c553742d96893458bae51de7344d02, type: 2}
   m_TrainingConfiguration:
     width: 80
     height: 80
@@ -5166,14 +5148,6 @@ MonoBehaviour:
     targetFrameRate: 60
   resetParameters:
     m_ResetParameters: []
-  m_IsCommunicatorOn: 0
-  m_IsInference: 1
-  m_EpisodeCount: 0
-  m_StepCount: 0
-  m_TotalStepCount: 0
-  m_ModeSwitched: 0
-  m_FirstAcademyReset: 0
-  KartMaterial: {fileID: 0}
 --- !u!4 &992056764 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1579282987822796750, guid: 941fac9249b6442cdb2d3f23472128e2,
@@ -6029,7 +6003,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1175779212}
   m_LocalRotation: {x: 0.03821578, y: 0.0000000020585236, z: -0.0000004992746, w: 0.99926955}
-  m_LocalPosition: {x: 17.09, y: 2.05, z: -0.75}
+  m_LocalPosition: {x: 17.09, y: 2.05, z: -6.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 166865640}
@@ -7167,6 +7141,15 @@ PrefabInstance:
       propertyPath: m_Name
       value: Kart
       objectReference: {fileID: 0}
+    - target: {fileID: 1593944921, guid: 8a2015a9601d162459389c9b9d1437fc, type: 3}
+      propertyPath: agentParameters.numberOfActionsBetweenDecisions
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1593944921, guid: 8a2015a9601d162459389c9b9d1437fc, type: 3}
+      propertyPath: brain
+      value: 
+      objectReference: {fileID: 11400000, guid: b7c553742d96893458bae51de7344d02,
+        type: 2}
     - target: {fileID: 3763822634849867143, guid: 8a2015a9601d162459389c9b9d1437fc,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -7180,7 +7163,7 @@ PrefabInstance:
     - target: {fileID: 3763822634849867143, guid: 8a2015a9601d162459389c9b9d1437fc,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.25
+      value: -1.69
       objectReference: {fileID: 0}
     - target: {fileID: 3763822634849867143, guid: 8a2015a9601d162459389c9b9d1437fc,
         type: 3}
@@ -10043,7 +10026,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2110853102}
   m_LocalRotation: {x: 0.03821578, y: 0.0000000020585236, z: -0.0000004992746, w: 0.99926955}
-  m_LocalPosition: {x: 17.09, y: 2.05, z: -0.75}
+  m_LocalPosition: {x: 17.09, y: 2.05, z: -6.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

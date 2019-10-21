@@ -13,7 +13,8 @@ namespace KartGame.Track
         [Tooltip ("A reference to the IControllable for the kart.  Normally this is the KartMovement script.")]
         [RequireInterface (typeof(IControllable))]
         public Object kartMovement;
-
+        private Object Goal;
+        private RacerAcademy m_MyAcademy;           //아카데미 변수
         IControllable m_KartMovement;
         bool m_IsTimerPaused = true;
         float m_Timer = 0f;
@@ -23,6 +24,17 @@ namespace KartGame.Track
         void Awake ()
         {
             m_KartMovement = kartMovement as IControllable;
+        }
+
+        public override void InitializeAgent()              //초기화 하래서 일단 작성은 해보는중
+        {
+            m_MyAcademy = GameObject.Find("Academy").GetComponent<RacerAcademy>();
+        }
+        public override void CollectObservations()          //이 함수를 잘 작성하는 것이 속도에 큰 영향을 줄듯
+        {
+            AddVectorObs(Goal);
+            AddVectorObs(gameObject.transform.rotation.x);          
+            AddVectorObs(gameObject.transform.rotation.z);
         }
 
         void Update ()

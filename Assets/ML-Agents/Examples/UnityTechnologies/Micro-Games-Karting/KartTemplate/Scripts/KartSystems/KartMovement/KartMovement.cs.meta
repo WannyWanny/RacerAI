@@ -3,7 +3,16 @@ guid: 53099c8bf5564a54caebda5331b303b6
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - brain: {fileID: 11400000, guid: b7c553742d96893458bae51de7344d02, type: 2}
+  - kart: {instanceID: 0}
+  - driver: {instanceID: 0}
+  - airborneModifier: {instanceID: 0}
+  - input: {instanceID: 0}
+  - frontGroundRaycast: {instanceID: 0}
+  - rightGroundRaycast: {instanceID: 0}
+  - leftGroundRaycast: {instanceID: 0}
+  - rearGroundRaycast: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
