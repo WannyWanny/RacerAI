@@ -4,7 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - brain: {fileID: 11400000, guid: b7c553742d96893458bae51de7344d02, type: 2}
+  - brain: {fileID: 11400000, guid: 6ce4e2aee99ffca4c808e1c165e9a1fe, type: 2}
   - kart: {instanceID: 0}
   - driver: {instanceID: 0}
   - airborneModifier: {instanceID: 0}
@@ -13,6 +13,10 @@ MonoImporter:
   - rightGroundRaycast: {instanceID: 0}
   - leftGroundRaycast: {instanceID: 0}
   - rearGroundRaycast: {instanceID: 0}
+  - chk1_RigidBody: {instanceID: 0}
+  - chk2_RigidBody: {instanceID: 0}
+  - chk3_RigidBody: {instanceID: 0}
+  - final_RigidBody: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

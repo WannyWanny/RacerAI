@@ -2,6 +2,7 @@
 using KartGame.KartSystems;
 using UnityEngine;
 using MLAgents;
+using KartGame.Track;
 
 namespace KartGame.Track
 {
@@ -13,8 +14,13 @@ namespace KartGame.Track
         [Tooltip ("A reference to the IControllable for the kart.  Normally this is the KartMovement script.")]
         [RequireInterface (typeof(IControllable))]
         public Object kartMovement;
-        private Object Goal;
-        private RacerAcademy m_MyAcademy;           //아카데미 변수
+        
+
+        Rigidbody m_Rigidbody;          //추가
+        public GameObject chk1_RigidBody;
+        public GameObject chk2_RigidBody;
+        public GameObject chk3_RigidBody;
+        public GameObject final_RigidBody;       //추가
         IControllable m_KartMovement;
         bool m_IsTimerPaused = true;
         float m_Timer = 0f;
@@ -24,17 +30,6 @@ namespace KartGame.Track
         void Awake ()
         {
             m_KartMovement = kartMovement as IControllable;
-        }
-
-        public override void InitializeAgent()              //초기화 하래서 일단 작성은 해보는중
-        {
-            m_MyAcademy = GameObject.Find("Academy").GetComponent<RacerAcademy>();
-        }
-        public override void CollectObservations()          //이 함수를 잘 작성하는 것이 속도에 큰 영향을 줄듯
-        {
-            AddVectorObs(Goal);
-            AddVectorObs(gameObject.transform.rotation.x);          
-            AddVectorObs(gameObject.transform.rotation.z);
         }
 
         void Update ()
@@ -108,6 +103,49 @@ namespace KartGame.Track
         public string GetName ()
         {
             return name;
+        }
+
+        public override void InitializeAgent()
+        {
+            base.InitializeAgent();
+            
+
+
+            SetReward(0.0f);
+        }
+        public override void CollectObservations()
+        {
+            //차의 속도와 위치 
+            AddVectorObs(m_Rigidbody.position);
+            AddVectorObs(m_Rigidbody.velocity.x);
+            AddVectorObs(m_Rigidbody.velocity.z);
+
+            AddVectorObs(chk1_RigidBody.transform);
+            AddVectorObs(chk2_RigidBody.transform);
+            AddVectorObs(chk3_RigidBody.transform);
+            AddVectorObs(final_RigidBody.transform);
+            
+            GetReward();
+        }
+
+        public override void AgentAction(float[] vectorAction, string textAction)
+        {
+            //전진과 후진시에 Reward값 부여. 
+            if (Input.GetKey(KeyCode.UpArrow))
+                AddReward(5.0f / 300.0f);
+            else if (Input.GetKey(KeyCode.DownArrow))
+                AddReward(-2.0f / 300.0f);
+
+            //회전시에도 Reward값 추가
+            if (Input.GetKey(KeyCode.LeftArrow) && !Input.GetKey(KeyCode.RightArrow))
+                AddReward(3.0f / 300.0f);
+            else if (!Input.GetKey(KeyCode.LeftArrow) && Input.GetKey(KeyCode.RightArrow))
+                AddReward(3.0f / 300.0f);
+
+            if (Input.GetKey(KeyCode.LeftShift))
+                AddReward(5.0f / 300.0f);
+
+            Debug.Log(GetReward());
         }
     }
 }

@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections;
 using KartGame.Track;
 using UnityEngine;
 using MLAgents;
-using UnityEngine.Events;
+using UnityEngine.Events; 
 using Object = UnityEngine.Object;
 
-//AddReward값을 총 4군데에 추가 했다.
-/*
-  ForceMove, TurnKart, StartDrift, StopDrift
- */
+
 namespace KartGame.KartSystems
 {
     /// <summary>
@@ -19,7 +17,7 @@ namespace KartGame.KartSystems
     /// the IKartModifier interface.
     /// </summary>
     [RequireComponent (typeof(IInput))] [RequireComponent (typeof(Rigidbody))]
-    public class KartMovement : Agent, IKartCollider, IMovable, IKartInfo
+    public class KartMovement : MonoBehaviour, IKartCollider, IMovable, IKartInfo
     {
         enum DriftState
         {
@@ -75,6 +73,9 @@ namespace KartGame.KartSystems
         public UnityEvent OnDriftStarted;
         public UnityEvent OnDriftStopped;
         public UnityEvent OnKartCollision;
+        Rigidbody m_Rigidbody;
+
+
 
         IInput m_Input;
         Vector3 m_RigidbodyPosition;
@@ -82,7 +83,6 @@ namespace KartGame.KartSystems
         Vector3 m_Movement;
         bool m_IsGrounded;
         GroundInfo m_CurrentGroundInfo;
-        Rigidbody m_Rigidbody;
         CapsuleCollider m_Capsule;
         IRacer m_Racer;
         List<IKartModifier> m_CurrentModifiers = new List<IKartModifier> (16); // The karts stats are based on a list of modifiers.  Each affects the results of the previous until the modified stats are calculated.
@@ -429,7 +429,6 @@ namespace KartGame.KartSystems
         /// </summary>
         void TurnKart (float deltaTime, ref Quaternion rotationStream)
         {
-            AddReward(1.0f / 300f);                     //회전 시에 reward추가
             Vector3 localVelocity = Quaternion.Inverse (rotationStream) * Quaternion.Inverse (m_DriftOffset) * m_Velocity;
             float forwardReverseSwitch = Mathf.Sign (localVelocity.z);
             float modifiedSteering = m_HasControl ? m_Input.Steering * forwardReverseSwitch : 0f;
@@ -493,7 +492,7 @@ namespace KartGame.KartSystems
         /// </summary>
         void StartDrift (GroundInfo currentGroundInfo, GroundInfo nextGroundInfo, Quaternion rotationStream)
         {
-            AddReward(5.0f / 3000f);            //드리프트 시작시에 Reward추가
+           
             if (m_Input.HopHeld && !currentGroundInfo.isGrounded && nextGroundInfo.isGrounded && m_HasControl && m_DriftState == DriftState.NotDrifting)
             {
                 Vector3 kartForward = rotationStream * Vector3.forward;
@@ -527,7 +526,7 @@ namespace KartGame.KartSystems
         /// </summary>
         void StopDrift (float deltaTime)
         {
-            AddReward(5.0f / 3000f);            //드리프트 끝날때 Reward추가
+         
             if (!m_Input.HopHeld || !m_HasControl)
             {
                 m_DriftOffset = Quaternion.RotateTowards (m_DriftOffset, Quaternion.identity, rotationCorrectionSpeed * deltaTime);
@@ -680,7 +679,7 @@ namespace KartGame.KartSystems
         /// </summary>
         public void ForceMove (Vector3 positionDelta, Quaternion rotationDelta)
         {
-            AddReward(0.01f / 3000f);
+     
             m_Velocity = Vector3.zero;
             m_DriftState = DriftState.NotDrifting;
             m_RepositionPositionDelta = positionDelta;

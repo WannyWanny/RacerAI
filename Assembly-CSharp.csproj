@@ -88,7 +88,6 @@
      <Compile Include="Assets\ML-Agents\Examples\UnityTechnologies\Micro-Games-Karting\KartTemplate\Scripts\KartSystems\KartMovement\KartMovement.cs" />
      <Compile Include="Assets\ML-Agents\Examples\UnityTechnologies\Micro-Games-Karting\KartTemplate\Scripts\KartSystems\KartMovement\KartStats.cs" />
      <Compile Include="Assets\ML-Agents\Examples\UnityTechnologies\Micro-Games-Karting\KartTemplate\Scripts\RacerAcademy.cs" />
-     <Compile Include="Assets\ML-Agents\Examples\UnityTechnologies\Micro-Games-Karting\KartTemplate\Scripts\RacerAgent.cs" />
      <Compile Include="Assets\ML-Agents\Examples\UnityTechnologies\Micro-Games-Karting\KartTemplate\Scripts\Timeline\DirectorTrigger.cs" />
      <Compile Include="Assets\ML-Agents\Examples\UnityTechnologies\Micro-Games-Karting\KartTemplate\Scripts\Track\Checkpoint.cs" />
      <Compile Include="Assets\ML-Agents\Examples\UnityTechnologies\Micro-Games-Karting\KartTemplate\Scripts\Track\InstantKartRepositioner.cs" />
