@@ -11,7 +11,7 @@ namespace KartGame.KartSystems
         /// Used for determining whether the kart should increase its forward speed.
         /// </summary>
         float Acceleration { get; }
-
+        
         /// <summary>
         /// Used for turning the kart left and right.
         /// </summary>

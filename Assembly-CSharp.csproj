@@ -22,7 +22,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2018_4_6;UNITY_2018_4;UNITY_2018;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_POST_PROCESSING_STACK_V2;UNITY_TEMPLATE_KART;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2018_1_OR_NEWER;UNITY_2018_2_OR_NEWER;UNITY_2018_3_OR_NEWER;UNITY_2018_4_OR_NEWER;UNITY_2018_4_12;UNITY_2018_4;UNITY_2018;PLATFORM_ARCH_64;UNITY_64;UNITY_INCLUDE_TESTS;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_TEXTURE_STREAMING;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_MANAGED_JOBS;ENABLE_MANAGED_TRANSFORM_JOBS;ENABLE_MANAGED_ANIMATION_JOBS;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_VIDEO;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_OUT_OF_PROCESS_CRASH_HANDLER;ENABLE_EVENT_QUEUE;ENABLE_CLUSTER_SYNC;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_4_6;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_UNITY_COLLECTIONS_CHECKS;ENABLE_BURST_AOT;UNITY_TEAM_LICENSE;ENABLE_VSTU;UNITY_POST_PROCESSING_STACK_V2;UNITY_TEMPLATE_KART;CSHARP_7_OR_LATER;CSHARP_7_3_OR_NEWER</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -59,14 +59,12 @@
      <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\FlyCamera.cs" />
      <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\GroundContact.cs" />
      <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\JointDriveController.cs" />
-     <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\RandomDecision.cs" />
      <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\RayPerception.cs" />
      <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\RayPerception2D.cs" />
      <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\RayPerception3D.cs" />
      <Compile Include="Assets\ML-Agents\Examples\SharedAssets\Scripts\TargetContact.cs" />
      <Compile Include="Assets\ML-Agents\Examples\Template\Scripts\TemplateAcademy.cs" />
      <Compile Include="Assets\ML-Agents\Examples\Template\Scripts\TemplateAgent.cs" />
-     <Compile Include="Assets\ML-Agents\Examples\Template\Scripts\TemplateDecision.cs" />
      <Compile Include="Assets\ML-Agents\Examples\UnityTechnologies\Micro-Games-Karting\KartTemplate\Scripts\KartSystems\Inputs\GamepadInput.cs" />
      <Compile Include="Assets\ML-Agents\Examples\UnityTechnologies\Micro-Games-Karting\KartTemplate\Scripts\KartSystems\Inputs\IInput.cs" />
      <Compile Include="Assets\ML-Agents\Examples\UnityTechnologies\Micro-Games-Karting\KartTemplate\Scripts\KartSystems\Inputs\KeyboardInput.cs" />
@@ -112,55 +110,62 @@
      <Compile Include="Assets\ML-Agents\Scripts\Academy.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\ActionMasker.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\Agent.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\Batcher.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\BCTeacherHelper.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\Brain.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\BrainParameters.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\BroadcastHub.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\AgentActionProto.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\AgentInfoProto.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\BrainParametersProto.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\CommandProto.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\CustomAction.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\CustomObservation.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\CustomResetParameters.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\DemonstrationMetaProto.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\EngineConfigurationProto.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\EnvironmentParametersProto.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\Header.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\ResolutionProto.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\SpaceTypeProto.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\UnityInput.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\UnityMessage.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\UnityOutput.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\UnityRlInitializationInput.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\UnityRlInitializationOutput.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\UnityRlInput.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\UnityRlOutput.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\UnityToExternal.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\CommunicatorObjects\UnityToExternalGrpc.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\Decision.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\Demonstration.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\DemonstrationRecorder.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\DemonstrationStore.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\HeuristicBrain.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\CommunicatorObjects\AgentAction.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\CommunicatorObjects\AgentInfo.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\CommunicatorObjects\BrainParameters.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\CommunicatorObjects\Command.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\CommunicatorObjects\CompressedObservation.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\CommunicatorObjects\CustomAction.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\CommunicatorObjects\CustomObservation.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\CommunicatorObjects\CustomResetParameters.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\CommunicatorObjects\DemonstrationMeta.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\CommunicatorObjects\EngineConfiguration.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\CommunicatorObjects\EnvironmentParameters.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\CommunicatorObjects\Header.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\CommunicatorObjects\SpaceType.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\CommunicatorObjects\UnityInput.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\CommunicatorObjects\UnityMessage.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\CommunicatorObjects\UnityOutput.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\CommunicatorObjects\UnityRlInitializationInput.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\CommunicatorObjects\UnityRlInitializationOutput.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\CommunicatorObjects\UnityRlInput.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\CommunicatorObjects\UnityRlOutput.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\CommunicatorObjects\UnityToExternal.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\CommunicatorObjects\UnityToExternalGrpc.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\GrpcExtensions.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Grpc\RpcCommunicator.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\ICommunicator.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\InferenceBrain\ApplierImpl.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\InferenceBrain\BarracudaModelParamLoader.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\InferenceBrain\GeneratorImpl.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\InferenceBrain\ModelRunner.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\InferenceBrain\TensorApplier.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\InferenceBrain\TensorGenerator.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\InferenceBrain\TensorNames.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\InferenceBrain\TensorProxy.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\InferenceBrain\Utils\Multinomial.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\InferenceBrain\Utils\RandomNormal.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\LearningBrain.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\Monitor.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\PlayerBrain.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Policy\BarracudaPolicy.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Policy\BehaviorParameters.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Policy\BrainParameters.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Policy\HeuristicPolicy.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Policy\IPolicy.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Policy\RemotePolicy.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\ResetParameters.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\RpcCommunicator.cs" />
-     <Compile Include="Assets\ML-Agents\Scripts\SocketCommunicator.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Sensor\CameraSensor.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Sensor\CameraSensorComponent.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Sensor\CompressedObservation.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Sensor\ISensor.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Sensor\RenderTextureSensor.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Sensor\RenderTextureSensorComponent.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Sensor\SensorBase.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Sensor\SensorComponent.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\Startup.cs" />
+     <Compile Include="Assets\ML-Agents\Scripts\Timer.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\UnityAgentsException.cs" />
      <Compile Include="Assets\ML-Agents\Scripts\Utilities.cs" />
      <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\Experimental.compute" />
@@ -184,6 +189,7 @@
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
      <None Include="Assets\ML-Agents\Examples\SharedAssets\Materials\ShaderOutline.shader" />
+     <None Include="Assets\ML-Agents\Plugins\ProtoBuffer\link.xml" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
      <None Include="Assets\ML-Agents\Plugins\Barracuda.Core\Barracuda\Resources\FastNV.compute" />

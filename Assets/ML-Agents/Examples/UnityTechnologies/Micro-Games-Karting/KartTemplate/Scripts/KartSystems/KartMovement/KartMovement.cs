@@ -1,10 +1,7 @@
-﻿using System;
+﻿using KartGame.Track;
 using System.Collections.Generic;
-using System.Collections;
-using KartGame.Track;
 using UnityEngine;
-using MLAgents;
-using UnityEngine.Events; 
+using UnityEngine.Events;
 using Object = UnityEngine.Object;
 
 
@@ -76,7 +73,6 @@ namespace KartGame.KartSystems
         Rigidbody m_Rigidbody;
 
 
-
         IInput m_Input;
         Vector3 m_RigidbodyPosition;
         Vector3 m_Velocity;
@@ -85,6 +81,7 @@ namespace KartGame.KartSystems
         GroundInfo m_CurrentGroundInfo;
         CapsuleCollider m_Capsule;
         IRacer m_Racer;
+        Racer race;
         List<IKartModifier> m_CurrentModifiers = new List<IKartModifier> (16); // The karts stats are based on a list of modifiers.  Each affects the results of the previous until the modified stats are calculated.
         List<IKartModifier> m_TempModifiers = new List<IKartModifier> (8);
         KartStats m_ModifiedStats; // The stats that are used to calculate the kart's velocity.
@@ -97,8 +94,8 @@ namespace KartGame.KartSystems
         float m_AccelerationInput;
         bool m_HopPressed;
         bool m_HopHeld;
-        Vector3 m_RepositionPositionDelta;
-        Quaternion m_RepositionRotationDelta = Quaternion.identity;
+        Vector3 m_RepositionPositionDelta;                     
+        Quaternion m_RepositionRotationDelta = Quaternion.identity;  
 
         const int k_MaxPenetrationSolves = 3;
         const float k_GroundToCapsuleOffsetDistance = 0.025f;
@@ -429,9 +426,10 @@ namespace KartGame.KartSystems
         /// </summary>
         void TurnKart (float deltaTime, ref Quaternion rotationStream)
         {
+            //float speed = race.getSteer();
             Vector3 localVelocity = Quaternion.Inverse (rotationStream) * Quaternion.Inverse (m_DriftOffset) * m_Velocity;
             float forwardReverseSwitch = Mathf.Sign (localVelocity.z);
-            float modifiedSteering = m_HasControl ? m_Input.Steering * forwardReverseSwitch : 0f;
+            float modifiedSteering = m_HasControl ? m_Racer.getSteer * forwardReverseSwitch : 0f;
             if (m_DriftState == DriftState.FacingLeft)
                 modifiedSteering = Mathf.Clamp (modifiedSteering, -1f, -minDriftingSteering);
             else if (m_DriftState == DriftState.FacingRight)
@@ -448,12 +446,13 @@ namespace KartGame.KartSystems
         /// </summary>
         void CalculateDrivingVelocity (float deltaTime, GroundInfo groundInfo, Quaternion rotationStream)
         {
+            //float turn = race.getMovement();
             Vector3 localVelocity = Quaternion.Inverse (rotationStream) * Quaternion.Inverse (m_DriftOffset) * m_Velocity;
             if (groundInfo.isGrounded)
             {
                 localVelocity.x = Mathf.MoveTowards (localVelocity.x, 0f, m_ModifiedStats.grip * deltaTime);
 
-                float acceleration = m_HasControl ? m_Input.Acceleration : localVelocity.z > 0.05f ? -1f : 0f;
+                float acceleration = m_HasControl ? m_Racer.getAccel : localVelocity.z > 0.05f ? -1f : 0f;
 
                 if(acceleration > -k_Deadzone && acceleration < k_Deadzone)    // No acceleration input.
                     localVelocity.z = Mathf.MoveTowards (localVelocity.z, 0f, m_ModifiedStats.coastingDrag * deltaTime);
@@ -679,11 +678,10 @@ namespace KartGame.KartSystems
         /// </summary>
         public void ForceMove (Vector3 positionDelta, Quaternion rotationDelta)
         {
-     
             m_Velocity = Vector3.zero;
             m_DriftState = DriftState.NotDrifting;
             m_RepositionPositionDelta = positionDelta;
-            m_RepositionRotationDelta = rotationDelta;
+            m_RepositionRotationDelta = rotationDelta;   
         }
 
         /// <summary>

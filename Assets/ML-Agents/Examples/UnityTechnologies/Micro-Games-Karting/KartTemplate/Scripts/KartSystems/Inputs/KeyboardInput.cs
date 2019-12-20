@@ -1,6 +1,11 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
+using System.Collections;
+using KartGame.Track;
 using UnityEngine;
+using MLAgents;
+using UnityEngine.Events;
+using Object = UnityEngine.Object;
 
 namespace KartGame.KartSystems
 {
@@ -34,15 +39,16 @@ namespace KartGame.KartSystems
             get { return m_HopHeld; }
         }
 
-        float m_Acceleration;
-        float m_Steering;
-        bool m_HopPressed;
-        bool m_HopHeld;
-        bool m_BoostPressed;
-        bool m_FirePressed;
 
-        bool m_FixedUpdateHappened;
+        public float m_Acceleration;        //초기화좀 돼라 씨빨
+        public float m_Steering;            //초기화좀 돼라 씨빨
+        public bool m_HopPressed;
+        public bool m_HopHeld;
+        public bool m_BoostPressed;
+        public bool m_FirePressed;
 
+        public bool m_FixedUpdateHappened;
+        
         void Update ()
         {
             if (Input.GetKey (KeyCode.UpArrow))

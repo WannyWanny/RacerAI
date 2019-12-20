@@ -9,16 +9,20 @@ namespace KartGame.KartSystems
     {
         [Tooltip ("The amount by which the kart bounces off the wall.  A value of 0.1 means 1.1 times the velocity into the wall is the velocity away from the wall.  A minimum value of 0.1 is suggested.")]
         public float bounciness = 0.1f;
-        
+        public bool isCollider = false;
         public Vector3 ModifyVelocity (IKartInfo collidingKart, RaycastHit collisionHit)
         {
+            
             //if the normal of collision points almost straight up or down, don't bounce
             if (Mathf.Abs(Vector3.Dot(collisionHit.normal, Vector3.up)) > .2f) return collidingKart.Velocity;
 
             Vector3 modifiedVelocity = collidingKart.Velocity;
 
             if (collidingKart.IsGrounded)
-                modifiedVelocity = Vector3.ProjectOnPlane (modifiedVelocity, collidingKart.CurrentGroundInfo.normal);
+            {
+                isCollider = true;                  //as/asdasas
+                modifiedVelocity = Vector3.ProjectOnPlane(modifiedVelocity, collidingKart.CurrentGroundInfo.normal);
+            }
 
             modifiedVelocity -= Vector3.Project (modifiedVelocity, collisionHit.normal) * (1f + bounciness);
 
